@@ -1,0 +1,159 @@
+body { 
+    background: linear-gradient(135deg, #0b0b16 0%, #15152a 50%, #231b3c 100%);
+    color: #f1eff5; 
+    font-family: 'Exo 2', sans-serif;
+    min-height: 100vh;
+    padding-bottom: 50px;
+}
+
+h5, .navbar-brand {
+    font-family: 'VT323', monospace;
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.navbar { 
+    background-color: rgba(10, 10, 22, 0.95) !important; 
+    border-bottom: 4px solid #ff4757; /* Rojo Madeline Dash */
+    box-shadow: 0 4px 20px rgba(255, 71, 87, 0.15);
+    backdrop-filter: blur(10px);
+}
+.navbar-brand {
+    color: #fff !important;
+    text-shadow: 0 0 10px rgba(255, 71, 87, 0.6);
+}
+
+.card { 
+    background: rgba(22, 22, 43, 0.85); 
+    border: 2px solid #3b3b5c; 
+    border-radius: 8px;
+    color: #ffffff; 
+    backdrop-filter: blur(5px);
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+.card:hover {
+    border-color: #5d5d8f;
+}
+.card-header { 
+    background-color: #1a1a36; 
+    border-bottom: 2px solid #3b3b5c; 
+    padding: 15px;
+}
+
+.form-label {
+    font-weight: 600;
+    color: #a5a5c7;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+.form-control, .form-select {
+    background-color: #0e0e1a !important;
+    border: 2px solid #3b3b5c !important;
+    color: #ffffff !important;
+    border-radius: 6px;
+}
+.form-control:focus, .form-select:focus {
+    border-color: #1e90ff !important;
+    box-shadow: 0 0 10px rgba(30, 144, 255, 0.4) !important;
+}
+.form-control::placeholder {
+    color: #57577e;
+}
+
+.table { 
+    color: #e2e2e2; 
+    margin-bottom: 0;
+}
+.table th { 
+    background-color: #0c0c16; 
+    border-bottom: 3px solid #3b3b5c; 
+    color: #00d2d3;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 12px 15px;
+}
+.table td { 
+    background-color: transparent; 
+    border-bottom: 1px solid #282846; 
+    vertical-align: middle;
+    padding: 12px 15px;
+}
+.table-hover tbody tr:hover td {
+    background-color: rgba(255, 255, 255, 0.03);
+}
+
+.badge-fresa { 
+    background: linear-gradient(135deg, #ff4757, #ff6b81);
+    box-shadow: 0 0 8px rgba(255, 71, 87, 0.5);
+    color: white;
+    font-weight: bold;
+}
+.badge-casete { 
+    background: linear-gradient(135deg, #1e90ff, #70a1ff);
+    box-shadow: 0 0 8px rgba(30, 144, 255, 0.5);
+    color: white;
+    font-weight: bold;
+}
+.badge-corazon { 
+    background: linear-gradient(135deg, #ed4c67, #fda7df);
+    box-shadow: 0 0 8px rgba(237, 76, 103, 0.5);
+    color: white;
+    font-weight: bold;
+}
+
+.badge-lado {
+    font-family: 'VT323', monospace;
+    font-size: 1.1rem;
+    padding: 2px 8px;
+    border-radius: 4px;
+    background-color: #2f3542;
+    border: 1px solid #57606f;
+}
+
+.btn-danger {
+    background-color: #ff4757;
+    border: none;
+    box-shadow: 0 4px 10px rgba(255, 71, 87, 0.3);
+    transition: all 0.2s ease;
+}
+.btn-danger:hover {
+    background-color: #ff6b81;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 15px rgba(255, 71, 87, 0.4);
+}
+.btn-warning {
+    background-color: #ffa502;
+    border: none;
+    color: #000;
+}
+.btn-warning:hover {
+    background-color: #ff7f50;
+    color: #000;
+}
+.btn-outline-light {
+    border: 2px solid #5d5d8f;
+    color: #a5a5c7;
+}
+.btn-outline-light:hover {
+    background-color: #5d5d8f;
+    color: #fff;
+    border-color: #5d5d8f;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #0f0f1b;
+}
+::-webkit-scrollbar-thumb {
+    background: #3b3b5c;
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #5d5d8f;
+}

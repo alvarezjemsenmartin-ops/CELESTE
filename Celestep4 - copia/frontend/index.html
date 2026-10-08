@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Celeste Super Guía</title>
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Exo+2:ital,wght@0,300;0,600;0,900;1,400&family=VT323&display=swap" rel="stylesheet">
+    <link href="https://jsdelivr.net" rel="stylesheet">
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark mb-4">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">🍓 Celeste Super Guía</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 mb-4">
+                <div class="card shadow">
+                    <div class="card-header">
+                        <h5 class="m-0 fw-bold text-warning" id="form-title">Registrar Secreto / Coleccionable</h5>
+                    </div>
+                    <div class="card-body">
+                        <form id="secreto-form">
+                            <input type="hidden" id="secreto-id">
+                            
+                            <div class="mb-3">
+                                <label for="capitulo_id" class="form-label">Capítulo</label>
+                                <select class="form-select" id="capitulo_id" required>
+                                </select>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="nombre" class="form-label">Nombre del Secreto</label>
+                                <input type="text" class="form-control" id="nombre" placeholder="Ej: Fresa Oculta del Salto" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="tipo_coleccionable" class="form-label">Tipo de Coleccionable</label>
+                                <select class="form-select" id="tipo_coleccionable" required>
+                                    <option value="Fresa">Fresa</option>
+                                    <option value="Casete">Cinta de Casete</option>
+                                    <option value="Corazon">Corazón de Cristal</option>
+                                </select>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="lado" class="form-label">Lado del Nivel</label>
+                                <select class="form-select" id="lado" required>
+                                    <option value="A">Lado A (Principal)</option>
+                                    <option value="B">Lado B (Remix)</option>
+                                    <option value="C">Lado C (Desafío)</option>
+                                </select>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="ubicacion_detalles" class="form-label">Detalles de Ubicación</label>
+                                <textarea class="form-control" id="ubicacion_detalles" rows="3" placeholder="Describe cómo encontrarlo..." required></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-danger w-100 fw-bold" id="btn-submit">Guardar Secreto</button>
+                            <button type="button" class="btn btn-secondary w-100 fw-bold mt-2 d-none" id="btn-cancel" onclick="resetForm()">Cancelar Edición</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-8">
+                <div class="card shadow">
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                        <h5 class="m-0 fw-bold text-info">Lista de Secretos Registrados</h5>
+                        <button class="btn btn-sm btn-outline-light fw-bold" onclick="cargarSecretos()">🔄 Actualizar</button>
+                    </div>
+                    <div class="card-body p-0">
+                        <div class="table-responsive">
+                            <table class="table table-hover m-0">
+                                <thead>
+                                    <tr>
+                                        <th>Capítulo</th>
+                                        <th>Nombre</th>
+                                        <th>Tipo</th>
+                                        <th class="text-center">Lado</th>
+                                        <th>Ubicación / Guía</th>
+                                        <th>Acciones</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="secretos-tabla">
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://jsdelivr.net"></script>
+    <script src="app.js"></script>
+</body>
+</html>
